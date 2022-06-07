@@ -1,11 +1,12 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
+  "readmeUrl": "https://gitlab.com/mcgonagle/mcgonagle/-/blob/master/README.md",
   "title": "LiveTerm",
   "name": "Thomas A. McGonagle",
   "ascii": "liveterm",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "mcgonagle",
+    "gitlab": "mcgonagle",
+    "linkedin": "thomasmcgonagle"
   },
   "email": "mcgonagle@gmail.com",
   "ps1_hostname": "shakeuplabs.com",
