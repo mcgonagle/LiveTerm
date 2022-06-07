@@ -11,3 +11,9 @@ build:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker build -t $CI_REGISTRY/sa-demo-group/thomas-mcgonagle-demo-group/liveterm .
     - docker push $CI_REGISTRY/sa-demo-group/thomas-mcgonagle-demo-group/liveterm
+deploy:
+  image:
+    name: bitnami/kubectl:latest
+    entrypoint: ['']
+  script:
+    - kubectl config get-contexts
