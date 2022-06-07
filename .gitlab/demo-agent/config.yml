@@ -9,3 +9,4 @@ gitops:
     paths:
     - glob: 'kubernetes/liveterm-deployment.yaml'
     #- glob: 'kubernetes/**/*.yaml'
+    
