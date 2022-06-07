@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liveterm
+  labels:
+    app: liveterm
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: liveterm
+  template:
+    metadata:
+      labels:
+        app: liveterm
+    spec:
+      containers:
+      - name: livterm
+        image: registry.gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/liveterm:latest
+        ports:
+        - containerPort: 80
