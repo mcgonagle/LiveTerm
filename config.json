@@ -1,19 +1,19 @@
 {
   "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
   "title": "LiveTerm",
-  "name": "John Doe",
+  "name": "Thomas A. McGonagle",
   "ascii": "liveterm",
   "social": {
     "github": "github",
     "linkedin": "linkedin"
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
-  "ps1_username": "visitor",
+  "email": "mcgonagle@gmail.com",
+  "ps1_hostname": "shakeuplabs.com",
+  "ps1_username": "thomas",
   "repo": "https://github.com/Cveinnt/LiveTerm",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "resume_url": "https://www.dropbox.com/s/c4m8xhoqirs0ppc/ThomasMcGonagle.pdf?dl=0",
   "donate_urls": {
-    "paypal": "https://paypal.me/cveinnt",
+    "paypal": "https://paypal.me/mcgonagletom",
     "patreon": "https://patreon.com/cveinnt"
   },
   "colors": {
