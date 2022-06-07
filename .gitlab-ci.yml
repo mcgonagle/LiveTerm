@@ -1,9 +1,9 @@
 build:
   image: docker:19.03.12
   variables:
-    CI_REGISTRY_USER: mcgonagle
-    CI_REGISTRY_PASSWORD: glpat-TNCRR6uZEm4jfqZsKT4x
-    CI_REGISTRY: registry.gitlab.com
+    CI_REGISTRY_USER: $CI_REGISTRY_USER
+    CI_REGISTRY_PASSWORD: $CI_REGISTRY_PASSWORD
+    CI_REGISTRY: $CI_REGISTRY
   stage: build
   services:
     - docker:19.03.12-dind
