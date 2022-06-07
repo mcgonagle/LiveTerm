@@ -15,7 +15,7 @@ spec:
         app: liveterm
     spec:
       containers:
-      - name: livterm
+      - name: liveterm
         image: registry.gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/liveterm:latest
         ports:
         - containerPort: 80
