@@ -1,0 +1,12 @@
+gitops:
+  # Manifest projects are watched by the agent. Whenever a project changes,
+  # GitLab deploys the changes using the agent.
+  manifest_projects:
+  - id: sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm
+    default_namespace: gitlab-agent
+    # Paths inside of the repository to scan for manifest files.
+    # Directories with names starting with a dot are ignored.
+    paths:
+    - glob: 'kubernetes/liveterm-deployment.yaml'
+    #- glob: 'kubernetes/**/*.yaml'
+    
