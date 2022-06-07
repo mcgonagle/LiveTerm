@@ -64,7 +64,7 @@ export const github = async (args: string[]): Promise<string> => {
 };
 
 export const gitlab = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.gitlab}/`);
+  window.open(`https://gitlab.com/${config.social.gitlab}/`);
 
   return 'Opening gitlab...';
 };
