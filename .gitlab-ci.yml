@@ -17,3 +17,11 @@ build:
 #    entrypoint: ['']
 #  script:
 #    - kubectl apply -f https://gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/-/raw/main/kubernetes/liveterm-deployment.yaml
+deploy:
+  image:
+    name: bitnami/kubectl:latest
+    entrypoint: ['']
+  script:
+    - kubectl config get-contexts
+    - kubectl config use-context path/to/agent/repository:agent-name
+    - kubectl get pods
