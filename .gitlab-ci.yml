@@ -22,6 +22,4 @@ deploy:
     name: bitnami/kubectl:latest
     entrypoint: ['']
   script:
-    - kubectl config get-contexts
-    - kubectl config use-context path/to/agent/repository:agent-name
     - kubectl get pods
