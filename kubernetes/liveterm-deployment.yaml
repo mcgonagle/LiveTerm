@@ -29,7 +29,7 @@ spec:
             - npm
             - run
             - dev
-          image: mcgonagle/liveterm
+          image: registry.gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/liveterm:latest 
           name: liveterm
           ports:
             - containerPort: 3000
