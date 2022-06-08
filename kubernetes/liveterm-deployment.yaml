@@ -1,21 +1,42 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: liveterm
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (HEAD)
+  creationTimestamp: null
   labels:
-    app: liveterm
+    io.kompose.service: liveterm
+  name: liveterm
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: liveterm
+      io.kompose.service: liveterm
+  strategy:
+    type: Recreate
   template:
     metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.1 (HEAD)
+      creationTimestamp: null
       labels:
-        app: liveterm
+        io.kompose.service: liveterm
     spec:
       containers:
-      - name: liveterm
-        image: registry.gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/liveterm:latest
-        ports:
-        - containerPort: 80
+        - args:
+            - npm
+            - run
+            - dev
+          image: mcgonagle/liveterm
+          name: liveterm
+          ports:
+            - containerPort: 3000
+          resources: {}
+      restartPolicy: Always
+      volumes:
+        - name: liveterm-claim0
+          persistentVolumeClaim:
+            claimName: liveterm-claim0
+status: {}
