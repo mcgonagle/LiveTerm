@@ -25,10 +25,8 @@ deploy:
     - kubectl config get-contexts
     - kubectl config use-context sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm:liveterm
     - kubectl get pods
-    - ls /builds/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/
-#    - kubectl apply -f https://gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/-/raw/main/kubernetes/liveterm-claim0-persistentvolumeclaim.yaml
-    - kubectl apply -f https://gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/-/snippets/2346900/raw/main/liveterm-claim0-persistentvolumeclaim.yaml
-#   - kubectl apply -f https://gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/-/raw/main/kubernetes/liveterm-deployment.yaml
-    - kubectl apply -f https://gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/-/snippets/2346061/raw/main/liveterm-deployment.yaml
-#   - kubectl apply -f https://gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/-/raw/main/kubernetes/liveterm-service.yaml
-    - kubectl apply -f https://gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/-/snippets/2346898/raw/main/liveterm-service.yaml
+    - kubectl apply -f /builds/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/kubernetes/liveterm-claim0-persistentvolumeclaim.yaml
+    - kubectl apply -f /builds/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/kubernetes/liveterm-deployment.yaml
+    - kubectl apply -f /builds/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/kubernetes/liveterm-service.yaml
+    - kubectl get pods
+
