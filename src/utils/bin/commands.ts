@@ -69,6 +69,12 @@ export const highschool = async (args: string[]): Promise<string> => {
   return 'Opening highschool...';
 };
 
+export const college = async (args: string[]): Promise<string> => {
+  window.open(`https://www.bentley.edu`);
+
+  return 'Opening college...';
+};
+
 export const gitlab = async (args: string[]): Promise<string> => {
   window.open(`https://gitlab.com/${config.social.gitlab}/`);
 
