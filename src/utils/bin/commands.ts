@@ -63,6 +63,18 @@ export const github = async (args: string[]): Promise<string> => {
   return 'Opening github...';
 };
 
+export const highschool = async (args: string[]): Promise<string> => {
+  window.open(`https://en.wikipedia.org/wiki/Winchester_High_School_(Massachusetts)`);
+
+  return 'Opening highschool...';
+};
+
+export const college = async (args: string[]): Promise<string> => {
+  window.open(`https://www.bentley.edu`);
+
+  return 'Opening college...';
+};
+
 export const gitlab = async (args: string[]): Promise<string> => {
   window.open(`https://gitlab.com/${config.social.gitlab}/`);
 
