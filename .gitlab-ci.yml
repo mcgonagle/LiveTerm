@@ -1,32 +1,53 @@
+# You can override the included template(s) by including variable overrides
+# SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Secret Detection customization: https://docs.gitlab.com/ee/user/application_security/secret_detection/#customizing-settings
+# Dependency Scanning customization: https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#customizing-the-dependency-scanning-settings
+# Container Scanning customization: https://docs.gitlab.com/ee/user/application_security/container_scanning/#customizing-the-container-scanning-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 build:
   image: docker:19.03.12
   variables:
-    CI_REGISTRY_USER: $CI_REGISTRY_USER
-    CI_REGISTRY_PASSWORD: $CI_REGISTRY_PASSWORD
-    CI_REGISTRY: $CI_REGISTRY
+    CI_REGISTRY_USER: "$CI_REGISTRY_USER"
+    CI_REGISTRY_PASSWORD: "$CI_REGISTRY_PASSWORD"
+    CI_REGISTRY: "$CI_REGISTRY"
   stage: build
   services:
-    - docker:19.03.12-dind
+  - docker:19.03.12-dind
   script:
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t $CI_REGISTRY/sa-demo-group/thomas-mcgonagle-demo-group/liveterm .
-    - docker push $CI_REGISTRY/sa-demo-group/thomas-mcgonagle-demo-group/liveterm
-#deploy:
-#  image:
-#    name: bitnami/kubectl:latest
-#    entrypoint: ['']
-#  script:
-#    - kubectl apply -f https://gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/-/raw/main/kubernetes/liveterm-deployment.yaml
+  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  - docker build -t $CI_REGISTRY/sa-demo-group/thomas-mcgonagle-demo-group/liveterm
+    .
+  - docker push $CI_REGISTRY/sa-demo-group/thomas-mcgonagle-demo-group/liveterm
 deploy:
   image:
     name: bitnami/kubectl:latest
-    entrypoint: ['']
+    entrypoint:
+    - ''
   script:
-    - kubectl config get-contexts
-    - kubectl config use-context sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm:liveterm
-    - kubectl get pods
-    - kubectl apply -f /builds/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/kubernetes/liveterm-claim0-persistentvolumeclaim.yaml
-    - kubectl apply -f /builds/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/kubernetes/liveterm-deployment.yaml
-    - kubectl apply -f /builds/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/kubernetes/liveterm-service.yaml
-    - kubectl get pods
-
+  - kubectl config get-contexts
+  - kubectl config use-context sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm:liveterm
+  - kubectl get pods
+  - kubectl apply -f /builds/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/kubernetes/liveterm-claim0-persistentvolumeclaim.yaml
+  - kubectl apply -f /builds/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/kubernetes/liveterm-deployment.yaml
+  - kubectl apply -f /builds/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/kubernetes/liveterm-service.yaml
+  - kubectl get pods
+stages:
+- build
+- test
+- deploy
+- review
+- dast
+- staging
+- canary
+- production
+- incremental rollout 10%
+- incremental rollout 25%
+- incremental rollout 50%
+- incremental rollout 100%
+- performance
+- cleanup
+sast:
+  stage: test
+include:
+- template: Auto-DevOps.gitlab-ci.yml
