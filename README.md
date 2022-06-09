@@ -1,3 +1,5 @@
+[![pipeline status](https://gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/badges/main/pipeline.svg)](https://gitlab.com/sa-demo-group/thomas-mcgonagle-demo-group/LiveTerm/-/commits/main)
+
 # [💻 LiveTerm - build terminal styled websites in minutes!](https://liveterm.vercel.app)
 
 Highly customizable, easy-to-use, and minimal terminal styled website template, powered by Next.js.
