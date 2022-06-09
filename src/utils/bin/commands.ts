@@ -75,6 +75,12 @@ export const college = async (args: string[]): Promise<string> => {
   return 'Opening college...';
 };
 
+export const teach = async (args: string[]): Promise<string> => {
+  window.open(`https://www.bfit.edu`);
+
+  return 'Opening teach...';
+};
+
 export const gitlab = async (args: string[]): Promise<string> => {
   window.open(`https://gitlab.com/${config.social.gitlab}/`);
 
