@@ -87,6 +87,12 @@ export const gitlab = async (args: string[]): Promise<string> => {
   return 'Opening gitlab...';
 };
 
+export const kids = async (args: string[]): Promise<string> => {
+  window.open(`https://photos.app.goo.gl/HmPq9WhgXJpeKMfg9`);
+
+  return 'Opening kids...';
+};
+
 export const linkedin = async (args: string[]): Promise<string> => {
   window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
