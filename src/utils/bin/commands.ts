@@ -25,7 +25,13 @@ Type 'sumfetch' to display summary.
 // Redirection
 export const repo = async (args: string[]): Promise<string> => {
   window.open(`${config.repo}`);
-  return 'Opening gitlab repository...';
+  return 'Opening GitHub repository...';
+};
+
+// Redirection
+export const readme = async (args: string[]): Promise<string> => {
+  window.open(`${config.repo}`);
+  return 'Opening GitHub repository...';
 };
 
 // About
@@ -35,7 +41,7 @@ Welcome to my website!
 More about me:
 'sumfetch' - short summary.
 'resume' - my latest resume.
-'readme' - my gitlab readme.`;
+'readme' - my GitHub readme.`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
