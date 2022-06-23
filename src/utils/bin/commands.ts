@@ -28,12 +28,6 @@ export const repo = async (args: string[]): Promise<string> => {
   return 'Opening GitHub repository...';
 };
 
-// Redirection
-export const readme = async (args: string[]): Promise<string> => {
-  window.open(`${config.repo}`);
-  return 'Opening GitHub repository...';
-};
-
 // About
 export const about = async (args: string[]): Promise<string> => {
   return `Hi, I am ${config.name}. 
