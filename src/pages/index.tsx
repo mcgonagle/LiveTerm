@@ -39,6 +39,17 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     <>
       <Head>
         <title>{config.title}</title>
+        
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQT26GXLH9"></script>
+         <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-HQT26GXLH9');
+        </script>
       </Head>
 
       <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
