@@ -105,6 +105,12 @@ export const lilly = async (args: string[]): Promise<string> => {
   return 'Opening Lilly...';
 };
 
+export const greene = async (args: string[]): Promise<string> => {
+  window.open(`https://twitter.com/mcgonagle/status/1041192434816962560/photo/1`);
+
+  return 'Major General Nathanael Greene...';
+};
+
 export const grampy = async (args: string[]): Promise<string> => {
   window.open(`https://photos.app.goo.gl/Zwp4wMiwYKPRQ97w9`);
 
