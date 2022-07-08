@@ -93,6 +93,24 @@ export const kids = async (args: string[]): Promise<string> => {
   return 'Opening kids...';
 };
 
+export const anderson = async (args: string[]): Promise<string> => {
+  window.open(`https://photos.app.goo.gl/8CgDebhXueEEez2g7`);
+
+  return 'Opening Anderson...';
+};
+
+export const lilly = async (args: string[]): Promise<string> => {
+  window.open(`https://photos.app.goo.gl/PikAuDkGhbzKYCat5`);
+
+  return 'Opening Lilly...';
+};
+
+export const grampy = async (args: string[]): Promise<string> => {
+  window.open(`https://photos.app.goo.gl/Zwp4wMiwYKPRQ97w9`);
+
+  return 'Opening Grampy...';
+};
+
 export const linkedin = async (args: string[]): Promise<string> => {
   window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
