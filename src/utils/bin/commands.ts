@@ -117,6 +117,12 @@ export const grampy = async (args: string[]): Promise<string> => {
   return 'Opening Grampy...';
 };
 
+export const crests = async (args: string[]): Promise<string> => {
+  window.open(`https://paper.dropbox.com/doc/Childrens-Family-Crests--Bk8_G~7mcyjPOpGZK_hDNSS5AQ-KV1zHQstP3yhMGqQLLJZs`);
+
+  return 'Opening Grampy...';
+};
+
 export const linkedin = async (args: string[]): Promise<string> => {
   window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
