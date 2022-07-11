@@ -70,7 +70,7 @@ export const highschool = async (args: string[]): Promise<string> => {
 };
 
 export const college = async (args: string[]): Promise<string> => {
-  window.open(`https://www.bentley.edu`);
+  window.open(`https://photos.app.goo.gl/Zn9EyzYG79znJxsv8`);
 
   return 'Opening college...';
 };
