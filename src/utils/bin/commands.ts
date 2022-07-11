@@ -100,7 +100,7 @@ export const anderson = async (args: string[]): Promise<string> => {
 };
 
 export const lilly = async (args: string[]): Promise<string> => {
-  window.open(`https://photos.app.goo.gl/PikAuDkGhbzKYCat5`);
+  window.open(`https://photos.app.goo.gl/dADWojDADJNVxQxc9`);
 
   return 'Opening Lilly...';
 };
