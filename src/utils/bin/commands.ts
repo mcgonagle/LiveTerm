@@ -105,6 +105,12 @@ export const lilly = async (args: string[]): Promise<string> => {
   return 'Opening Lilly...';
 };
 
+export const mcgoctocat = async (args: string[]): Promise<string> => {
+  window.open(`https://github.com/mcgonagle/McGoctocat`);
+
+  return 'Opening McGoctocat...';
+};
+
 export const greene = async (args: string[]): Promise<string> => {
   window.open(`https://twitter.com/mcgonagle/status/1041192434816962560/photo/1`);
 
